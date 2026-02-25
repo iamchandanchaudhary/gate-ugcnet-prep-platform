@@ -10,6 +10,9 @@ import ReportsPage from './Pages/ReportsPage';
 import ProfilePage from './Pages/ProfilePage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
+import StartTestPage from './Pages/StartTestPage';
+import TestPage from './Pages/TestPage';
+import TestReportPage from './Pages/TestReportPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
 // Protected route wrapper
@@ -58,6 +61,30 @@ function AppRoutes() {
           element={
             <ProtectedRoute>
               <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/start-test"
+          element={
+            <ProtectedRoute>
+              <StartTestPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/test"
+          element={
+            <ProtectedRoute>
+              <TestPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/test-report"
+          element={
+            <ProtectedRoute>
+              <TestReportPage />
             </ProtectedRoute>
           }
         />
